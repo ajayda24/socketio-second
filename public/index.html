@@ -20,8 +20,9 @@
       <button type="submit" id="create-room">Create room</button>
     </form>
   </div>
-  <div id="room">
+  <div id="room" style="display: none;">
     <p id="shareJoinCode"></p>
+    <a id="shareViaLink" href="https://socketio-second.herokuapp.com/" target="_blank" rel="noopener noreferrer">Share</a>
     <p id="showUsername"></p>
     <p id='info'></p>
     <ul id="chat">
@@ -33,6 +34,7 @@
     </form>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous"></script>
   <script src="socket.io/socket.io.js"></script>
   <script src="js/script.js"></script>
 </body>

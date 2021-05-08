@@ -1,5 +1,14 @@
 const socket = io()
 
+window.onload = () => {
+  const {j} = Qs.parse(location.search, {
+    ignoreQueryPrefix:true
+  })
+  if (j) {
+    document.getElementById('joinCode').value = j
+  }
+}
+
 const createJoinDiv = document.getElementById('create-join-room')
 const joinRoomForm = document.getElementById('join-room-form')
 const createRoomForm = document.getElementById('create-room-form')
@@ -7,7 +16,6 @@ const roomDiv = document.getElementById('room')
 const chatForm = document.getElementById('chat-form')
 const chatList = document.getElementById('chat')
 
-roomDiv.style.display = 'none'
 
 createRoomForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -29,6 +37,9 @@ socket.on('createRoomSuccess', (data) => {
 
   document.getElementById('shareJoinCode').innerHTML =
     'Join Code : ' + data.user.room
+  document
+    .getElementById('shareViaLink')
+    .setAttribute('href', `https://socketio-second.herokuapp.com/?j=${data.user.room}`)
   document.getElementById('showUsername').innerHTML =
     'Username : ' + data.user.username
 })
