@@ -1,13 +1,5 @@
 const socket = io()
 
-window.onload = () => {
-  const {j} = Qs.parse(location.search, {
-    ignoreQueryPrefix:true
-  })
-  if (j) {
-    document.getElementById('joinCode').value = j
-  }
-}
 
 const createJoinDiv = document.getElementById('create-join-room')
 const joinRoomForm = document.getElementById('join-room-form')
@@ -16,6 +8,18 @@ const roomDiv = document.getElementById('room')
 const chatForm = document.getElementById('chat-form')
 const chatList = document.getElementById('chat')
 
+window.onload = () => {
+  const {j} = Qs.parse(location.search, {
+    ignoreQueryPrefix:true
+  })
+  if (j) {
+    const username = prompt('Enter your name : ')
+    document.getElementById('joinCode').value = j
+    document.getElementById('username').value = username
+    
+    socket.emit('joinRoom', { username:username, joinCode:j })
+  }
+}
 
 createRoomForm.addEventListener('submit', (e) => {
   e.preventDefault()
