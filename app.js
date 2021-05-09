@@ -2,11 +2,14 @@ const path = require('path')
 const http = require('http')
 const express = require('express')
 
-const { userJoinHelper,userDeleteHelper, usersArray } = require('./utils/users')
+const { userJoinHelper,userDeleteHelper, usersArray } = require('./utils/users-socket')
 
 const app = express()
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, 'public','index-socket.html'))
+})
 
 const port = process.env.PORT || 3000
 const server = app.listen(port, () => {

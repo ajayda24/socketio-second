@@ -26,6 +26,7 @@ io.on('connection', (socket) => {
   })
 
   socket.on('joinGame', data => {
+    console.log('get here');
     const checkRoom = usersArray.find((el) => el.room == data.room)
     if (checkRoom) {
       
@@ -42,7 +43,6 @@ io.on('connection', (socket) => {
   })
 
   socket.on('playGame', data => {
-    console.log(data.btnInfo.id)
     socket.broadcast.to(data.room).emit('gameBoxClick', { btnInfo: data.btnInfo, room: data.room, players: data.players, playerId: socket.id })
     
     socket.emit('playerWhoClicked')
