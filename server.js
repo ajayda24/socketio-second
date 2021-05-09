@@ -39,6 +39,7 @@ io.on('connection', (socket) => {
       }
     } else {
       console.log('Room not Exist');
+      socket.emit('roomNotExist')
     }
   })
 

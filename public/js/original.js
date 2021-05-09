@@ -53,7 +53,6 @@ function on() {
   const { j } = Qs.parse(location.search, {
     ignoreQueryPrefix: true,
   })
-  console.log(j);
   if (j) {
     document.getElementById('players-input').value = j
 
@@ -97,8 +96,7 @@ function off(roomId) {
 
   document.getElementById('chain-reaction-heading').innerHTML =
     'Waiting for Other Users to join ... '
-  document.getElementById('players-input').value = ''
-  document.getElementById('players-input').placeholder = joinCode
+  document.getElementById('players-input').value = joinCode
   document.getElementById('players-input').disabled = true
   document.getElementById('joinCodeShareLink').style.display = 'block'
   document
@@ -107,7 +105,31 @@ function off(roomId) {
       'href',
       `https://socketio-second.herokuapp.com/?j=${joinCode}`
     )
-  document.getElementById('startGame').setAttribute('disabled', 'true')
+  document.getElementById('startGame').style.display = 'none'
+  document.getElementById('joinGameBtn').style.display = 'none'
+}
+
+function joinGame() {
+  const j = document.getElementById('players-input').value
+  console.log(j);
+  socket.emit('joinGame', { room: j })
+  socket.on('roomNotExist', () => {
+    document.getElementById('players-input').value = 'Code is Invalid'
+  })
+  socket.on('waitForPlayers', (data) => {
+    document.getElementById('chain-reaction-heading').innerHTML =
+      'Waiting for Other Users to join ... '
+    document.getElementById('players-input').placeholder = data.room
+    document.getElementById('players-input').disabled = true
+    document.getElementById('joinCodeShareLink').style.display = 'block'
+    document
+      .getElementById('joinCodeShareLink')
+      .setAttribute(
+        'href',
+        `https://socketio-second.herokuapp.com/?j=${data.room}`
+      )
+    document.getElementById('startGame').setAttribute('disabled', 'true')
+  })
 }
 
 socket.on('startGame', (data) => {

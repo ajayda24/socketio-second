@@ -11,10 +11,13 @@
       <form class="login-form" action="javascript:void(0);">
         <div class="players">
           <p id="chain-reaction-heading">🔗 Reaction </p>
-          <input id="players-input" type="number" max="25" min="2" placeholder="No. of Players - Max. 25" required>
+          <input id="players-input" type="text" placeholder="Enter Code" required>
         </div>
+        <br>
         <a id="joinCodeShareLink" href='#' style="display: none; color: aliceblue;">Copy Link</a>
-        <button id="startGame" type="button" onclick="off()" class="form-submit">Start</button>
+        <button id="joinGameBtn" type="button" onclick="joinGame()" class="form-submit">Join</button>
+        <br>
+        <button id="startGame" type="button" onclick="off()" class="form-submit">Create</button>
         <p class="about">Developed by Thejus & Ajay</p>
       </form>
     </div>
