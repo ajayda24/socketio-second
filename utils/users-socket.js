@@ -1,8 +1,8 @@
 
 const usersArray = []
 
-const userJoinHelper = (id,room,players) => {
-  const user = { id, room, players}
+const userJoinHelper = (id,username, room) => {
+  const user = { id,username, room }
   usersArray.push(user)
   return user
 }

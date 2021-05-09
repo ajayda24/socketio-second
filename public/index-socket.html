@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socket IO</title>
+</head>
+<body>
+  <h1>NodeJS - ExpressJS - SocketIO</h1>
+  <div id="create-join-room">
+    <form method="GET" action="" id="join-room-form">
+      <input type="text" name="username" id="username" placeholder="Enter Name" required autocomplete="off">
+      <input type="text" name="joinCode" id="joinCode" placeholder="Enter Code" required autocomplete="off">
+      <button type="submit">Join</button>
+    </form>
+<br><br>
+    <form action="" method="get" id="create-room-form">
+      <input type="text" name="username" id="username" required autocomplete="off" placeholder="Enter Name">
+      <button type="submit" id="create-room">Create room</button>
+    </form>
+  </div>
+  <div id="room" style="display: none;">
+    <p id="shareJoinCode"></p>
+    <a id="shareViaLink" href="https://socketio-second.herokuapp.com/" target="_blank" rel="noopener noreferrer">Share</a>
+    <p id="showUsername"></p>
+    <p id='info'></p>
+    <ul id="chat">
+
+    </ul>
+    <form action="" id="chat-form">
+      <input type="text" name="roomChat" id="roomChat">
+      <button type="submit">Chat</button>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous"></script>
+  <script src="socket.io/socket.io.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

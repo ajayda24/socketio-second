@@ -1,0 +1,291 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: black;
+  text-align: center;
+  margin: 8rem auto;
+}
+
+.cornerOne {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10%;
+  position: relative;
+  font-size: 1rem;
+  position: relative;
+}
+.cornerTwo {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10%;
+  position: relative;
+  font-size: 1rem;
+  position: relative;
+}
+.cornerThree {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10%;
+  position: relative;
+  font-size: 1rem;
+  position: relative;
+}
+.cornerFour {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10%;
+  position: relative;
+  font-size: 1rem;
+  position: relative;
+}
+.sideTop {
+  background-color: white;
+  width: 10rem;
+  border-radius: 10%;
+  height: 10rem;
+  position: relative;
+  font-size: 1rem;
+  position: relative;
+}
+.sideLeft {
+  background-color: white;
+  border-radius: 10%;
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  font-size: 1rem;
+  position: relative;
+}
+.sideRight {
+  background-color: white;
+  border-radius: 10%;
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  font-size: 1rem;
+  position: relative;
+}
+.sideDown {
+  background-color: white;
+  border-radius: 10%;
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  font-size: 1rem;
+  position: relative;
+}
+.center {
+  background-color: white;
+  border-radius: 10%;
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  font-size: 1rem;
+  position: relative;
+}
+
+@media (min-width: 250px) {
+  html {
+    font-size: 15%;
+  }
+  .cornerOne,
+  .cornerTwo,
+  .cornerThree,
+  .cornerFour,
+  .sideTop,
+  .sideLeft,
+  .sideRight,
+  .sideDown,
+  .center {
+    font-size: 0.2rem;
+  }
+}
+@media (min-width: 320px) {
+  html {
+    font-size: 36%;
+  }
+  .cornerOne,
+  .cornerTwo,
+  .cornerThree,
+  .cornerFour,
+  .sideTop,
+  .sideLeft,
+  .sideRight,
+  .sideDown,
+  .center {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 481px) {
+  html {
+    font-size: 23%;
+  }
+  .cornerOne,
+  .cornerTwo,
+  .cornerThree,
+  .cornerFour,
+  .sideTop,
+  .sideLeft,
+  .sideRight,
+  .sideDown,
+  .center {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 641px) {
+  html {
+    font-size: 30%;
+  }
+  .cornerOne,
+  .cornerTwo,
+  .cornerThree,
+  .cornerFour,
+  .sideTop,
+  .sideLeft,
+  .sideRight,
+  .sideDown,
+  .center {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 700px) {
+  html {
+    font-size: 32%;
+  }
+  .cornerOne,
+  .cornerTwo,
+  .cornerThree,
+  .cornerFour,
+  .sideTop,
+  .sideLeft,
+  .sideRight,
+  .sideDown,
+  .center {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 961px) {
+  html {
+    font-size: 37%;
+  }
+  .cornerOne,
+  .cornerTwo,
+  .cornerThree,
+  .cornerFour,
+  .sideTop,
+  .sideLeft,
+  .sideRight,
+  .sideDown,
+  .center {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1025px) {
+  html {
+    font-size: 48%;
+  }
+  .cornerOne,
+  .cornerTwo,
+  .cornerThree,
+  .cornerFour,
+  .sideTop,
+  .sideLeft,
+  .sideRight,
+  .sideDown,
+  .center {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1281px) {
+  html {
+    font-size: 34.5%;
+  }
+  .cornerOne,
+  .cornerTwo,
+  .cornerThree,
+  .cornerFour,
+  .sideTop,
+  .sideLeft,
+  .sideRight,
+  .sideDown,
+  .center {
+    font-size: 4rem;
+  }
+}
+
+
+#overlay {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: 3rem auto;
+  display: none;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 20;
+  width: 40rem;
+  height: 60rem;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  font-size: 4rem;
+}
+
+
+.login-form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  width: 100%;
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+
+.about{
+  font-size: 3rem;
+  padding: 0 60px;
+  letter-spacing: normal;
+  line-height: 1.4;
+  margin-top: 10rem;
+}
+
+#players-input{
+  width: 60%;
+  padding: 15px;
+  font-size: 3rem;
+}
+
+.form-submit{
+  margin-top: 20px;
+  padding: 10px;
+  width: 40%;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#overlay-gameover {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: 3rem auto;
+  display: none;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 20;
+  width: 40rem;
+  height: 65rem;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  font-size: 4rem;
+}
+
+#players-input::placeholder {
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
