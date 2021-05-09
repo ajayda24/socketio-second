@@ -53,6 +53,7 @@ function on() {
   const { j } = Qs.parse(location.search, {
     ignoreQueryPrefix: true,
   })
+  console.log(j);
   if (j) {
     document.getElementById('players-input').value = j
 

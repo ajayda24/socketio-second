@@ -26,7 +26,7 @@ io.on('connection', (socket) => {
   })
 
   socket.on('joinGame', data => {
-    console.log('get here');
+    console.log('join game server');
     const checkRoom = usersArray.find((el) => el.room == data.room)
     if (checkRoom) {
       
